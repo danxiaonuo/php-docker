@@ -50,6 +50,7 @@ ARG PHP_BUILD_CONFIG="\
     --with-iconv-dir \
     --with-kerberos \
     --with-libxml \
+    --with-pgsql \
     --with-mysqli=mysqlnd \
     --with-pdo-mysql=mysqlnd \
     --with-openssl \
