@@ -198,6 +198,7 @@ ARG PHP_BUILD_DEPS="\
     tidyhtml-dev \ 
     postgresql-client \
     postgresql-libs \
+    libpq-dev \
     libzip-dev"
 ENV PHP_BUILD_DEPS=$PHP_BUILD_DEPS
 
@@ -341,6 +342,7 @@ ARG PHP_BUILD_DEPS="\
     tidyhtml-dev \ 
     postgresql-client \
     postgresql-libs \
+    libpq-dev \
     libzip-dev"
 ENV PHP_BUILD_DEPS=$PHP_BUILD_DEPS
 
