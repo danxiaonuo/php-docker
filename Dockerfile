@@ -35,7 +35,7 @@ ENV DOWNLOAD_SRC=$DOWNLOAD_SRC
 
 # PHP版本
 # https://github.com/php
-ARG PHP_VERSION=8.3.1
+ARG PHP_VERSION=8.3.2
 ENV PHP_VERSION=$PHP_VERSION
 # PHP编译参数
 ARG PHP_BUILD_CONFIG="\
@@ -265,6 +265,8 @@ RUN set -eux && \
     ./buildconf --force && \
     ./configure ${PHP_BUILD_CONFIG} && \
     make -j$(($(nproc)+1)) && make -j$(($(nproc)+1)) install && \
+    ln -sf ${PHP_DIR}/bin/* /usr/bin/ && \
+    ln -sf ${PHP_DIR}/sbin/* /usr/sbin/ && \
     cd ${DOWNLOAD_SRC}/redis-${REDIS_VERSION} && \
     /data/php/bin/phpize && ./configure --with-php-config=/data/php/bin/php-config && \
     make -j$(($(nproc)+1)) && make -j$(($(nproc)+1)) install && \
