@@ -339,10 +339,39 @@ ARG PKG_DEPS="\
     ca-certificates"
 ENV PKG_DEPS=$PKG_DEPS
 
+# PHP相关依赖包
 ARG PHP_BUILD_DEPS="\
-"
+    libxml2 \
+    libcurl4 \
+    libfreetype6 \
+    libjpeg-dev \
+    libpng16-16 \
+    libgettextpo0 \
+    libiconv-hook1 \
+    libkrb5-3 \
+    libpq5 \
+    libmysqlclient21 \
+    libssl-dev \
+    libpcre3 \
+    libpcre2-8-0 \
+    libsqlite3-0 \
+    libbz2-1.0 \
+    libcdb1 \
+    libgmp10 \
+    libreadline8 \
+    libldap2-dev \
+    libtidy-dev \
+    libzip4 \
+    libonig5 \
+    libxslt1-dev \
+    libc-client-dev \
+    libgpgme11 \
+    libmecab2 \
+    libc-client2007e \
+    libmcrypt4 \
+    libltdl7 \
+    libwebp-dev"
 ENV PHP_BUILD_DEPS=$PHP_BUILD_DEPS
-
 
 # ***** 安装依赖 *****
 RUN set -eux && \
