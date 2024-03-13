@@ -49,9 +49,9 @@ ARG PHP_BUILD_CONFIG="\
     --with-gettext \
     --with-kerberos \
     --with-libxml \
-    --with-pgsql \
-    --with-mysqli=mysqlnd \
-    --with-pdo-mysql=mysqlnd \
+    --with-pdo-pgsql \
+    --with-mysqli=shared,mysqlnd \
+    --with-pdo-mysql=shared,mysqlnd \
     --with-openssl \
     --with-external-pcre \
     --with-pdo-sqlite \
@@ -212,7 +212,6 @@ ARG PHP_BUILD_DEPS="\
     libc-client2007e \
     libmcrypt4 \
     libltdl7 \
-    libpq-dev \
     libwebp-dev"
 ENV PHP_BUILD_DEPS=$PHP_BUILD_DEPS
 
@@ -371,7 +370,6 @@ ARG PHP_BUILD_DEPS="\
     libc-client2007e \
     libmcrypt4 \
     libltdl7 \
-    libpq-dev \
     libwebp-dev"
 ENV PHP_BUILD_DEPS=$PHP_BUILD_DEPS
 
