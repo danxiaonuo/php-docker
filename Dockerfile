@@ -212,7 +212,7 @@ ARG PHP_BUILD_DEPS="\
     libc-client2007e \
     libmcrypt4 \
     libltdl7 \
-    postgresql-client \
+    libpq-dev \
     libwebp-dev"
 ENV PHP_BUILD_DEPS=$PHP_BUILD_DEPS
 
@@ -371,7 +371,7 @@ ARG PHP_BUILD_DEPS="\
     libc-client2007e \
     libmcrypt4 \
     libltdl7 \
-    postgresql-client \
+    libpq-dev \
     libwebp-dev"
 ENV PHP_BUILD_DEPS=$PHP_BUILD_DEPS
 
