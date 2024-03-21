@@ -49,6 +49,7 @@ ARG PHP_BUILD_CONFIG="\
     --with-gettext \
     --with-kerberos \
     --with-libxml \
+    --with-pgsql=shared \
     --with-pdo-pgsql=shared \
     --with-mysqli=shared,mysqlnd \
     --with-pdo-mysql=shared,mysqlnd \
