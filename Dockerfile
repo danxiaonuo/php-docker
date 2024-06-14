@@ -1,7 +1,7 @@
 #############################
 #     设置公共的变量         #
 #############################
-FROM ubuntu:latest AS base
+FROM --platform=$BUILDPLATFORM ubuntu:jammy AS base
 # 作者描述信息
 MAINTAINER danxiaonuo
 # 时区设置
@@ -35,7 +35,7 @@ ENV DOWNLOAD_SRC=$DOWNLOAD_SRC
 
 # PHP版本
 # https://github.com/php
-ARG PHP_VERSION=8.3.4
+ARG PHP_VERSION=8.3.8
 ENV PHP_VERSION=$PHP_VERSION
 # PHP编译参数
 ARG PHP_BUILD_CONFIG="\
@@ -120,11 +120,11 @@ ARG REDIS_VERSION=6.0.2
 ENV REDIS_VERSION=$REDIS_VERSION
 # swoole
 # https://pecl.php.net/package/swoole
-ARG SWOOLE_VERSION=5.1.1
+ARG SWOOLE_VERSION=5.1.3
 ENV SWOOLE_VERSION=$SWOOLE_VERSION
 # mongodb
 # https://pecl.php.net/package/mongodb
-ARG MONGODB_VERSION=1.17.2
+ARG MONGODB_VERSION=1.19.2
 ENV MONGODB_VERSION=$MONGODB_VERSION
 
 # 构建阶段依赖软件包
